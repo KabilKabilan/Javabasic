@@ -1,0 +1,23 @@
+package com.java.practice.opps;
+
+abstract class InsAbs{
+	//String agentName;
+	//String agentSalary;
+	abstract void calculatePremium();
+	abstract void calculateReturn();
+}
+class bank extends InsAbs{
+	double calculatePremium(double salary) {
+		return salary*0.05;
+	}
+	double calculateReturn(double salary) {
+		return salary*0.02;
+	}
+}
+public class InsuranceAbstract {
+	public static void main(String[] args) {
+	bank obj = new bank();
+	obj.calculatePremium(10000);
+	obj.calculateReturn(10000);
+}
+}
